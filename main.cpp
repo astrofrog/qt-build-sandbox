@@ -10,5 +10,6 @@ int main(int argc, char *argv[]) {
   menubar->addMenu("&File");
 
   window->show();
+  window->raise();
   return app.exec();
 }
