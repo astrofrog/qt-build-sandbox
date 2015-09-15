@@ -1,24 +1,14 @@
 #include <QApplication>
 #include <QMenuBar>
+#include <QMainWindow>
 
-#include "main.h"
+int main(int argc, char *argv[]) {
+  QApplication app(argc, argv);
+  QMainWindow *window = new QMainWindow;
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
-    mainWindow *window = new mainWindow;
+  QMenuBar *menubar = window->menuBar();
+  menubar->addMenu("&File");
 
-    QMenuBar *menubar = window -> menuBar();
-    menubar->addMenu("&File");
-
-    window->show();
-    return app.exec();
-}
-
-mainWindow::mainWindow(QMainWindow *parent)
-{
-
-
-
-
+  window->show();
+  return app.exec();
 }
