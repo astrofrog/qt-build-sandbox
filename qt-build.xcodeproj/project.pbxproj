@@ -77,16 +77,16 @@
 			isa = PBXSourcesBuildPhase;
 			name = "Build Sources";
 		};
-		9B36DA7E32F0304E780E7972 = {
+		8EE92F8FA333C9E415C5B34E = {
 			isa = PBXFileReference;
-			name = "QtGui.framework";
-			path = "/Library/Frameworks/QtGui.framework";
+			name = "QtXml.framework";
+			path = "/Library/Frameworks/QtXml.framework";
 			refType = 0;
 			sourceTree = "<absolute>";
 			lastKnownFileType = "wrapper.framework";
 		};
-		501667F26B3C1FF6767A7C12 = {
-			fileRef = "9B36DA7E32F0304E780E7972";
+		C2643FEB592DBFD1429BE4E1 = {
+			fileRef = "8EE92F8FA333C9E415C5B34E";
 			isa = PBXBuildFile;
 			settings = {
 			};
@@ -105,10 +105,70 @@
 			settings = {
 			};
 		};
+		C374004D45E01156F931B37D = {
+			isa = PBXFileReference;
+			name = "QtOpenGL.framework";
+			path = "/Library/Frameworks/QtOpenGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		450A0D11527AF164AEFE7377 = {
+			fileRef = "C374004D45E01156F931B37D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9B36DA7E32F0304E780E7972 = {
+			isa = PBXFileReference;
+			name = "QtGui.framework";
+			path = "/Library/Frameworks/QtGui.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		501667F26B3C1FF6767A7C12 = {
+			fileRef = "9B36DA7E32F0304E780E7972";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DA18A6831232F53228631AD1 = {
+			isa = PBXFileReference;
+			name = "OpenGL.framework";
+			path = "/System/Library/Frameworks/OpenGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		BCEF71E1EDFB18DA77DC750B = {
+			fileRef = "DA18A6831232F53228631AD1";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C6766F86E49E9C8701C8E637 = {
+			isa = PBXFileReference;
+			name = "AGL.framework";
+			path = "/System/Library/Frameworks/AGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		0C6D4628EE0B0D1479A20551 = {
+			fileRef = "C6766F86E49E9C8701C8E637";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
 		ED1E82605DD74B483AF3C982 = {
 			children = (
+				"8EE92F8FA333C9E415C5B34E",
+				"7BC2E65A5E699A5E5D834CA2",
+				"C374004D45E01156F931B37D",
 				"9B36DA7E32F0304E780E7972",
-				"7BC2E65A5E699A5E5D834CA2");
+				"DA18A6831232F53228631AD1",
+				"C6766F86E49E9C8701C8E637");
 			isa = PBXGroup;
 			name = "External Frameworks and Libraries";
 			path = "";
@@ -118,8 +178,12 @@
 		2A1043669E6E5A7426EA502A = {
 			buildActionMask = 2147483647;
 			files = (
+				"C2643FEB592DBFD1429BE4E1",
+				"069D05B0128AE5DC7EE31738",
+				"450A0D11527AF164AEFE7377",
 				"501667F26B3C1FF6767A7C12",
-				"069D05B0128AE5DC7EE31738");
+				"BCEF71E1EDFB18DA77DC750B",
+				"0C6D4628EE0B0D1479A20551");
 			isa = PBXFrameworksBuildPhase;
 			name = "Frameworks & Libraries";
 		};
@@ -230,14 +294,21 @@
 					"/usr/include/QtCore",
 					"/Library/Frameworks/QtGui.framework/Versions/4/Headers",
 					"/usr/include/QtGui",
+					"/Library/Frameworks/QtOpenGL.framework/Versions/4/Headers",
+					"/usr/include/QtOpenGL",
+					"/Library/Frameworks/QtXml.framework/Versions/4/Headers",
+					"/usr/include/QtXml",
 					"/usr/include",
 					".",
+					"/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers",
+					"/System/Library/Frameworks/AGL.framework/Headers",
 					".",
 					"/usr/local/include",
 					"/System/Library/Frameworks/CarbonCore.framework/Headers",
 					"/usr/local/Qt4.8/mkspecs/macx-xcode");
 				LIBRARY_SEARCH_PATHS = (
-					"/Library/Frameworks");
+					"/Library/Frameworks",
+					"/System/Library/Frameworks/");
 				FRAMEWORK_SEARCH_PATHS = (
 					"/Library/Frameworks",
 					"/Library/Frameworks");
@@ -247,6 +318,8 @@
 					"-g",
 					"-Wall",
 					"-W",
+					"-DQT_XML_LIB",
+					"-DQT_OPENGL_LIB",
 					"-DQT_GUI_LIB",
 					"-DQT_CORE_LIB",
 					"-DQT_SHARED");
@@ -255,6 +328,8 @@
 					"-g",
 					"-Wall",
 					"-W",
+					"-DQT_XML_LIB",
+					"-DQT_OPENGL_LIB",
 					"-DQT_GUI_LIB",
 					"-DQT_CORE_LIB",
 					"-DQT_SHARED");
@@ -300,14 +375,21 @@
 					"/usr/include/QtCore",
 					"/Library/Frameworks/QtGui.framework/Versions/4/Headers",
 					"/usr/include/QtGui",
+					"/Library/Frameworks/QtOpenGL.framework/Versions/4/Headers",
+					"/usr/include/QtOpenGL",
+					"/Library/Frameworks/QtXml.framework/Versions/4/Headers",
+					"/usr/include/QtXml",
 					"/usr/include",
 					".",
+					"/System/Library/Frameworks/OpenGL.framework/Versions/A/Headers",
+					"/System/Library/Frameworks/AGL.framework/Headers",
 					".",
 					"/usr/local/include",
 					"/System/Library/Frameworks/CarbonCore.framework/Headers",
 					"/usr/local/Qt4.8/mkspecs/macx-xcode");
 				LIBRARY_SEARCH_PATHS = (
-					"/Library/Frameworks");
+					"/Library/Frameworks",
+					"/System/Library/Frameworks/");
 				FRAMEWORK_SEARCH_PATHS = (
 					"/Library/Frameworks",
 					"/Library/Frameworks");
@@ -317,6 +399,8 @@
 					"-g",
 					"-Wall",
 					"-W",
+					"-DQT_XML_LIB",
+					"-DQT_OPENGL_LIB",
 					"-DQT_GUI_LIB",
 					"-DQT_CORE_LIB",
 					"-DQT_SHARED");
@@ -325,6 +409,8 @@
 					"-g",
 					"-Wall",
 					"-W",
+					"-DQT_XML_LIB",
+					"-DQT_OPENGL_LIB",
 					"-DQT_GUI_LIB",
 					"-DQT_CORE_LIB",
 					"-DQT_SHARED");
