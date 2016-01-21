@@ -6,10 +6,14 @@ TEMPLATE = app
 TARGET = 
 DEPENDPATH += .
 INCLUDEPATH += .
+ 
 # OpenGL and XML Qt Frameworks
 QT += opengl
 QT += xml
 
-
 # Input
-SOURCES += main.cpp
+SOURCES += opengl_mdi.cpp
+
+
+
+
